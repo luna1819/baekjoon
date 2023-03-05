@@ -3,6 +3,31 @@ import sys
 
 def compare():
 
+  N = int(sys.stdin.readline())
+  star = ""
+  blank = ""
+  num = 3
+
+  for i in range(N):
+    if i==0:
+      star += '*'
+      print(star.rjust(N))
+
+    elif 0 < i < N:
+      star += '*'
+      print(star.rjust(N)+'*'*i)
+
+  for j in range(N-1):
+    blank += " "
+    astar_num = (2*N-num)
+    astar = '*'*astar_num
+    print(blank+(astar.rjust(N-num)))
+    num += 2
+
+
+
+
+
 
 
 
@@ -14,17 +39,17 @@ def compare():
 
 
   #오름차순
-  array = [1, 3, 5, 7, 9, 2, 4, 6, 8, 10]
-
-  for j in range(len(array)):
-    k = len(array)-j
-    for i in range(1, k):
-      if array[i-1] < array[i]:
-        array[i], array[i-1] = array[i-1], array[i]
-        # temp = array[i-1]
-        # array[i-1] = array[i]
-        # array[i] = temp
-  print(array)
+  # array = [1, 3, 5, 7, 9, 2, 4, 6, 8, 10]
+  #
+  # for j in range(len(array)):
+  #   k = len(array)-j
+  #   for i in range(1, k):
+  #     if array[i-1] < array[i]:
+  #       array[i], array[i-1] = array[i-1], array[i]
+  #       # temp = array[i-1]
+  #       # array[i-1] = array[i]
+  #       # array[i] = temp
+  # print(array)
 
   # 문자열 오름차순
   # num_str = "1567920"
